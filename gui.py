@@ -67,7 +67,7 @@ class App:
         table_frame = tk.Frame(canvas)
         canvas.create_window((0, 0), window=table_frame, anchor="nw")
 
-        # Configuring columns to expand with the window
+        # Configuring columns
         frame.grid_columnconfigure(0, weight=1)
         frame.grid_rowconfigure(0, weight=1)
         table_frame.grid_columnconfigure(0, weight=1)
@@ -105,7 +105,7 @@ class App:
         self.root.grid_columnconfigure(0, weight=1)
 
     def calculate_ratings(self):
-        self.students = []  # Clear previous student data
+        self.students = []  # Clear previous
         for row in self.student_entries:
             name = row[0].get()
             scores = [float(entry.get()) for entry in row[1:-1] if entry.get()]
